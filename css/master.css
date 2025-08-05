@@ -1,0 +1,104 @@
+* {
+padding: 0;
+margin: 0 ;
+list-style: none;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+::selection{
+background-color: #123;
+color: #fff;
+}
+
+h1 span{
+font-family: cursive;
+}
+
+h1{
+font-family: cursive;
+animation-name: top_down;
+animation-direction: alternate;
+animation-iteration-count: 4;
+animation-timing-function: linear;
+animation-duration: 4s;
+}
+
+
+@keyframes top_down{
+0%{
+transform: scale(1.1);
+}
+
+100%{
+transform: scale(1);
+}
+
+
+
+}
+
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #dc354657;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #dc354657;
+}
+
+hr{
+border-top: 2px dotted #fff;
+width: 100%;
+height: 2px;
+}
+
+thead tr{
+background-color: #123 !important;
+color: #fff !important;
+}
+
+tr , td {
+vertical-align: middle;
+margin: 0 !important;
+padding: 0 ;
+}
+
+
+i{
+cursor: pointer;
+color: #123;
+}
+
+
+
+@media screen and (max-width : 576px){
+.container{
+width: 100% !important;
+/* padding: 10px; */
+padding: 5px !important;
+}
+
+table{
+width: 100% !important;
+padding: 0 !important;
+}
+
+
+table tr td {
+font-size: 12px;
+}
+
+table tr td button {
+font-size: 12px !important;
+}
+
+
+
+}
+
+
+.headingOne i {
+font-size: 30px;
+color: #123;
+}
