@@ -14,13 +14,11 @@ displayOfSite();
 sitesList = [];
 }
 
-var counter = 0;
 function addSite(){
 if(regexOfUrl.test(siteUrl.value) == true){
 var site = {
 websiteName : siteName.value ,
 websiteUrl : siteUrl.value ,
-count : ++counter,
 }
 
 sitesList.push(site);
@@ -48,9 +46,10 @@ siteUrl.value = null;
 function displayOfSite(){
 var cartona = "";
 for(let iter in sitesList){
-cartona += `
+var indexPlus = +iter + 1;
+  cartona += `
   <tr>
-                <td>${sitesList[iter].count}</td>
+                <td>${indexPlus}</td>
                 <td>${sitesList[iter].websiteName}</td>
                 <td><button class="btn btn-success" onclick="visitSite(${iter})">Visit</button></td>
                 <td><button class="btn btn-danger" onclick="deleteSite(${iter})">Delete</button></td>
